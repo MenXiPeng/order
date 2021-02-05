@@ -22,7 +22,8 @@ public class OrderController {
     @Autowired
     private RestTemplate restTemplate;
 
-    private static final String URL = "http://PAYMENT";
+    //private static final String URL = "http://PAYMENT";
+    private static final String URL = "http://payment";
     //private static final String URL = "http://localhost:8011";
 
     @RequestMapping("/getOrder")
