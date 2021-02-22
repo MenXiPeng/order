@@ -5,6 +5,10 @@ spring:
   application:
     name: order
   # zookeeper 配置中心
+  cloud:
+    circuitbreaker: # 开启服务熔断 默认开启
+      hystrix:
+        enabled: true
 #  cloud:
 #    zookeeper:
 #      connect-string: 127.0.0.1:2181
@@ -21,6 +25,22 @@ feign:
        connectTimeout: 30000
        readTimeout: 30000
        loggerLevel: FULL
+  hystrix:
+    enabled: true
+
+#circuitBreaker:
+#  errorThresholdPercentage:
+#default_circuitBreakerErrorThresholdPercentage
+#hystrix:
+#  command:
+#    default:
+#      circuit:
+#        isolation:
+#          thread:
+#            circuitBreakerErrorThresholdPercentage: 60
+
+
+
 eureka:
   client:
     #表示是否将自己注册进EurekaServer默认为true
